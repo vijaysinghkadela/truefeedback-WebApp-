@@ -42,23 +42,15 @@ export async function POST(request: Request) {
         },
         { status: 200 }
       );
-    }else{
-        return Response.json(
-            {
-              success: false,
-              message:
-                "Incorrect Verification Code",
-            },
-            { status: 200 }
-          );  
+    } else {
+      return Response.json(
+        {
+          success: false,
+          message: "Incorrect Verification Code",
+        },
+        { status: 200 }
+      );
     }
-
-
-
-
-
-
-
   } catch (error) {
     console.error("Error verifying user", error);
     return Response.json(
